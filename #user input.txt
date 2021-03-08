@@ -1,0 +1,32 @@
+#user input
+# Exercise 1: The if statement
+userReply = input("Do you need to ship a package? (Type yes or no) ")
+userReply = isyes(userReply)
+if userReply == True:
+    print("We can help you ship that package!")
+    #Exercise 3
+    userReply = input("Would you like to buy stamps, enevelope, or make a copy? (Type stamps, enevelope or copy) ")
+    userReply = choice(userReply)
+    if userReply ==  "stamps":
+        print("We have plenty of stamps designs to choose from.")
+    elif userReply == "envelope":
+        print("We have many envelope sizes to choose from.")
+    elif userReply == "copy":
+        check = False
+        # checking the user input
+        while check == False:
+            try:
+                copies = int(input("How many copies would you like? (Type a number)"))
+                print("Here are {} copies".format(copies))
+                check = True
+            except: 
+             print("Sorry this is not a number")
+
+    elif userReply == None:
+        print("Sorry wrong input")  
+    else:   
+        print("Thank you please come again.")
+# Exercise 2: The else st statement
+
+else:
+    print("Please Come back when you do need to ship a package.  Thank you")
